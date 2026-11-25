@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Name | Your Title</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap">
+<style>
+:root{--bg:#fff;--fg:#111;--mut:#666;--card:#f4f4f6;--line:#e3e3e8;--ac:#4f46e5;--acfg:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0d10;--fg:#f3f3f5;--mut:#9a9aa5;--card:#18181d;--line:#2a2a31;--ac:#818cf8;--acfg:#0d0d10}}
+:root[data-theme="dark"]{--bg:#0d0d10;--fg:#f3f3f5;--mut:#9a9aa5;--card:#18181d;--line:#2a2a31;--ac:#818cf8;--acfg:#0d0d10}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:60px}nav b{margin-right:auto}
+nav a{text-decoration:none;font-size:14px;color:var(--mut)}
+.btn{display:inline-block;background:var(--ac);color:var(--acfg)!important;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:15px}
+.btn.s{padding:8px 16px;font-size:14px}
+section{padding:56px 0}.hero{text-align:center;padding-top:44px}
+.chip{display:inline-flex;align-items:center;gap:10px;background:var(--card);padding:6px 14px 6px 6px;border-radius:999px;font-size:14px;margin-bottom:18px}
+.chip img,.chip i{width:34px;height:34px;border-radius:50%;object-fit:cover;background:var(--line)}
+h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:0 auto 14px;max-width:760px}
+h2{font-size:clamp(24px,3.5vw,34px);margin:0 0 8px;text-align:center}
+.sub{color:var(--mut);max-width:620px;margin:0 auto 24px}
+.vid{margin:36px auto 0;max-width:820px;aspect-ratio:16/9;background:var(--card);border-radius:16px;overflow:hidden;display:grid;place-items:center;color:var(--mut)}
+.vid video{width:100%;height:100%;object-fit:cover;background:#000}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+.card video{width:100%;aspect-ratio:16/9;background:#000;display:block}
+.card .in{padding:14px 16px}.card p{margin:4px 0 0;color:var(--mut);font-size:14px}.card strong{display:block}
+.card q{display:block;margin:0 0 10px;quotes:none}
+.who{display:flex;gap:10px;align-items:center}.who img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.x{position:absolute;top:8px;right:8px;background:#000a;color:#fff;border:0;border-radius:50%;width:28px;height:28px;cursor:pointer}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:center}
+.about img,.about .ph{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;background:var(--card)}
+@media(max-width:700px){.about{grid-template-columns:1fr}}
+details{border-bottom:1px solid var(--line);padding:14px 0;max-width:720px;margin:0 auto}
+summary{cursor:pointer;font-weight:600}details p{color:var(--mut);margin:8px 0 0}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--mut);font-size:14px}
+.empty{color:var(--mut);text-align:center;grid-column:1/-1}
+#edit{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:10;overflow:auto;padding:calc(16px + env(safe-area-inset-top,0px)) 16px 40px;box-sizing:border-box}
+#dr label{display:block;font-size:13px;color:var(--mut);margin:10px 0 4px}
+#dr input[type=text],#dr input[type=url],#dr textarea{width:100%;box-sizing:border-box;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
+#dr fieldset{border:1px solid var(--line);border-radius:12px;margin:18px 0;padding:6px 12px 14px}
+#msg{font-size:13px;color:var(--ac);min-height:20px}
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"]{--bg:#0a0507;--fg:#fbf3e4;--mut:#b9a98f;--card:#16090d;--line:#3a1d22;--ac:#e8b84a;--acfg:#1a0a05;--gold:#e8b84a;--gold2:#fff1b8;--red:#c8102e;color-scheme:dark}
+body{font-family:"Inter",system-ui,sans-serif;background:radial-gradient(900px 500px at 10% -5%,#c8102e38,transparent 60%),radial-gradient(800px 500px at 95% 10%,#e8b84a24,transparent 60%),var(--bg);background-attachment:fixed}
+h1,h2,nav b{font-family:"Playfair Display",Georgia,serif;font-weight:800}
+h1{background:linear-gradient(100deg,#fff1b8,#e8b84a 45%,#ff5a5f);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{background:linear-gradient(100deg,#fff1b8,#e8b84a);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2::after{content:"";display:block;width:64px;height:3px;margin:12px auto 0;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:3px}
+.about h2::after{margin-left:0}
+nav{background:#0a0507cc;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:#e8b84a33}
+nav b{color:var(--gold);font-size:19px}nav a:hover{color:var(--gold)}
+.btn{background:linear-gradient(135deg,#f7d98a,#e8b84a 50%,#d9482b);color:#1a0a05!important;box-shadow:0 8px 30px #e8b84a40;transition:.25s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 14px 40px #c8102e66}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#fff8 50%,transparent 65%);transform:translateX(-120%);animation:shine 3.5s infinite;pointer-events:none}
+@keyframes shine{to{transform:translateX(120%)}}
+.hero{position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:0;width:640px;height:640px;max-width:100%;transform:translateX(-50%);background:radial-gradient(circle,#c8102e45,transparent 65%);filter:blur(30px);z-index:-1;pointer-events:none}
+.chip{border:1px solid #e8b84a55;background:#e8b84a14;color:var(--gold2)}
+.chip img,.chip i{box-shadow:0 0 0 2px var(--gold)}
+.vid{border:1px solid #e8b84a66;border-radius:20px;box-shadow:0 0 0 6px #e8b84a14,0 30px 80px #c8102e55}
+.stars{margin-top:24px;color:var(--gold);letter-spacing:4px;font-size:20px}
+.stars span{display:block;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--mut);margin-top:4px}
+.card{background:linear-gradient(160deg,#1d0d12,#0f0608);border:1px solid #e8b84a2e;transition:.3s;animation:up .7s both}
+.card:hover{transform:translateY(-6px);border-color:#e8b84a99;box-shadow:0 18px 50px #c8102e40}
+.card:nth-child(2){animation-delay:.1s}.card:nth-child(3){animation-delay:.2s}.card:nth-child(4){animation-delay:.3s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.card strong{color:var(--gold2)}
+section:nth-of-type(even){background:linear-gradient(180deg,transparent,#c8102e12,transparent)}
+.about img,.about .ph{border:1px solid #e8b84a66;box-shadow:-14px 14px 0 #c8102e55}
+details[open] summary,summary:hover{color:var(--gold)}
+details{border-color:#e8b84a2e}footer{border-color:#e8b84a33}
+@media(prefers-reduced-motion:reduce){.btn::after,.card{animation:none}}
+</style></head><body>
+<div id="root">
+<nav><div class="wrap"><b id="nav-name">Your Name</b><a href="#faq">FAQ</a><a href="#reviews">Testimonials</a><a href="#about">About</a><a class="btn s cta" href="#book" target="_blank" rel="noopener"></a></div></nav>
+<section class="hero"><div class="wrap">
+<div class="chip"><span id="chip-img"></span><span id="chip-name"></span></div>
+<h1 id="h1"></h1><p class="sub" id="sub"></p><a class="btn cta" href="#book" target="_blank" rel="noopener"></a>
+<div class="stars">★★★★★<span>Real stories. Real results.</span></div>
+<div class="vid" id="hero-vid"></div></div></section>
+<section id="reviews"><div class="wrap"><h2>Stories That Speak for Themselves</h2>
+<p class="sub" style="text-align:center">Hear from real people about their experience and results.</p>
+<div class="grid" id="vids"></div></div></section>
+<section><div class="wrap"><h2>Words That Speak for Themselves</h2>
+<div class="grid" id="texts"></div>
+<p style="text-align:center;margin-top:28px"><a class="btn cta" href="#book" target="_blank" rel="noopener"></a></p></div></section>
+<section id="about"><div class="wrap about"><div id="about-img"></div><div><h2 style="text-align:left">About</h2><div id="about-txt"></div></div></div></section>
+<section id="faq"><div class="wrap"><h2>Let’s Clear Things Up</h2><div id="faqs" style="margin-top:20px"></div></div></section>
+<footer><div class="wrap">© <span id="yr"></span> <span id="ft-name"></span>. All rights reserved.</div></footer>
+<button class="btn" id="edit" hidden>Edit site</button>
+<aside id="dr" hidden>
+<div style="display:flex;justify-content:space-between;align-items:center"><b>Edit site</b><button class="btn s" id="close">Close</button></div>
+<div id="msg"></div>
+<label>Your name</label><input type="text" id="f-name">
+<label>Title under your name</label><input type="text" id="f-role">
+<label>Headline</label><input type="text" id="f-h1">
+<label>Subtext</label><textarea id="f-sub" rows="3"></textarea>
+<label>Button text</label><input type="text" id="f-cta">
+<label>Book-a-call link (Calendly, Cal.com, etc.)</label><input type="url" id="f-book" placeholder="https://">
+<label>About (blank line = new paragraph)</label><textarea id="f-about" rows="6"></textarea>
+<label>FAQ (one per line: Question :: Answer)</label><textarea id="f-faq" rows="6"></textarea>
+<button class="btn s" id="save" style="margin-top:12px">Save text changes</button>
+<fieldset><legend>Photo &amp; hero video</legend>
+<label>Profile picture</label><input type="file" id="u-photo" accept="image/*">
+<label>Hero video (max 20 MB)</label><input type="file" id="u-hero" accept="video/*"></fieldset>
+<fieldset><legend>Add video testimonial</legend>
+<label>Name &amp; role</label><input type="text" id="v-name" placeholder="Sara, Business Owner">
+<label>Result</label><input type="text" id="v-res" placeholder="What changed for them">
+<label>Video (max 20 MB)</label><input type="file" id="v-file" accept="video/*">
+<button class="btn s" id="v-add" style="margin-top:12px">Add video</button></fieldset>
+<fieldset><legend>Add text testimonial</legend>
+<label>Name &amp; role</label><input type="text" id="t-name" placeholder="Sara, Business Owner">
+<label>Result (short)</label><input type="text" id="t-res">
+<label>What they said (optional)</label><textarea id="t-txt" rows="3"></textarea>
+<label>Photo or screenshot (optional)</label><input type="file" id="t-file" accept="image/*">
+<button class="btn s" id="t-add" style="margin-top:12px">Add testimonial</button></fieldset>
+</aside>
+</div>
+<script id="state" type="application/json">{"name":"Your Name","role":"Your Title","h1":"Your Big Promise Goes Here","sub":"One or two sentences about who you help and what they get.","cta":"Book a free call","book":"","photo":"","heroVideo":"","about":"Write your story here.\n\nAdd a second paragraph about why you do this.","faq":"How does it work? :: Explain it in a sentence or two.\nHow much does it cost? :: Answer here.","vids":[],"texts":[]}</script>
+<script id="app">
+const HEAD=document.head.innerHTML,ROOT=document.getElementById("root").outerHTML,APP=document.getElementById("app").textContent;
+const S=JSON.parse(document.getElementById("state").textContent);
+const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)];
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+let own=false,assets=null,art=null;
+const ok=u=>typeof u==="string"&&(u.startsWith("https://")||u.startsWith("/_blob/"));
+function render(){
+ document.title=S.name+" | "+S.role;
+ $("#nav-name").textContent=S.name;$("#chip-name").textContent=S.name+" · "+S.role;
+ $("#ft-name").textContent=S.name;$("#yr").textContent=new Date().getFullYear();
+ const ci=$("#chip-img");ci.replaceChildren();
+ if(ok(S.photo)){const i=el("img");i.src=S.photo;i.alt="";ci.append(i)}else ci.append(el("i"));
+ $("#h1").textContent=S.h1;$("#sub").textContent=S.sub;
+ all(".cta").forEach(a=>{a.textContent=S.cta;a.href=S.book&&S.book.startsWith("https://")?S.book:"#book"});
+ const hv=$("#hero-vid");hv.replaceChildren();
+ if(ok(S.heroVideo)){const v=el("video");v.src=S.heroVideo;v.controls=true;v.playsInline=true;v.preload="metadata";hv.append(v)}else hv.textContent="Your video goes here";
+ const vs=$("#vids");vs.replaceChildren();
+ if(!S.vids.length)vs.append(el("p","empty","Video testimonials will appear here."));
+ S.vids.forEach((t,i)=>{const c=el("div","card"),v=el("video");v.src=t.url;v.controls=true;v.playsInline=true;v.preload="metadata";
+  const d=el("div","in");d.append(el("strong",0,t.name),el("p",0,t.res));c.append(v,d);if(own)c.append(xbtn("vids",i));vs.append(c)});
+ const ts=$("#texts");ts.replaceChildren();
+ if(!S.texts.length)ts.append(el("p","empty","Text testimonials will appear here."));
+ S.texts.forEach((t,i)=>{const c=el("div","card"),d=el("div","in");
+  if(ok(t.img)){const m=el("img");m.src=t.img;m.alt="";m.style.cssText="width:100%;display:block";c.append(m)}
+  d.append(el("strong",0,t.res));if(t.txt)d.append(el("p",0,"“"+t.txt+"”"));d.append(el("p",0,"— "+t.name));
+  c.append(d);if(own)c.append(xbtn("texts",i));ts.append(c)});
+ const ai=$("#about-img");ai.replaceChildren();
+ if(ok(S.photo)){const i=el("img");i.src=S.photo;i.alt=S.name;ai.append(i)}else ai.append(el("div","ph"));
+ const at=$("#about-txt");at.replaceChildren();S.about.split(/\n\s*\n/).forEach(p=>at.append(el("p",0,p)));
+ const fq=$("#faqs");fq.replaceChildren();
+ S.faq.split("\n").filter(l=>l.includes("::")).forEach(l=>{const[q,...a]=l.split("::"),d=el("details");d.append(el("summary",0,q.trim()),el("p",0,a.join("::").trim()));fq.append(d)});
+}
+function xbtn(k,i){const b=el("button","x","×");b.title="Remove";b.onclick=async()=>{if(confirm("Remove this?")){S[k].splice(i,1);await save()}};return b}
+async function save(){
+ msg("Saving…");
+ const html="<!doctype html><html lang=\"en\"><head>"+HEAD+"</head><body>"+ROOT+"<script id=\"state\" type=\"application/json\">"+JSON.stringify(S).replace(/</g,"\\u003c")+"<\/script><script id=\"app\">"+APP+"<\/script></body></html>";
+ try{await art.publish(html)}catch(e){msg("Couldn’t save: "+(e.message||e.code))}
+}
+function msg(t){$("#msg").textContent=t}
+async function up(f){
+ if(!f)throw new Error("Choose a file first.");
+ if(f.size>20*1048576)throw new Error("That file is over 20 MB. Compress it first.");
+ msg("Uploading…");return (await assets.upload(f)).url}
+function fill(){["name","role","h1","sub","cta","book","about","faq"].forEach(k=>$("#f-"+k).value=S[k])}
+function guard(fn){return async()=>{try{await fn()}catch(e){msg(e.message||"Something went wrong")}}}
+function wire(){
+ $("#edit").onclick=()=>{fill();$("#dr").hidden=false};$("#close").onclick=()=>$("#dr").hidden=true;
+ $("#save").onclick=guard(async()=>{["name","role","h1","sub","cta","book","about","faq"].forEach(k=>S[k]=$("#f-"+k).value.trim());await save()});
+ $("#u-photo").onchange=guard(async()=>{S.photo=await up($("#u-photo").files[0]);await save()});
+ $("#u-hero").onchange=guard(async()=>{S.heroVideo=await up($("#u-hero").files[0]);await save()});
+ $("#v-add").onclick=guard(async()=>{const url=await up($("#v-file").files[0]);S.vids.push({name:$("#v-name").value.trim()||"Client",res:$("#v-res").value.trim(),url});await save()});
+ $("#t-add").onclick=guard(async()=>{const f=$("#t-file").files[0],img=f?await up(f):"";
+  const name=$("#t-name").value.trim(),res=$("#t-res").value.trim(),txt=$("#t-txt").value.trim();
+  if(!res&&!txt&&!img)throw new Error("Add a result, a quote or a photo.");
+  S.texts.push({name:name||"Client",res,txt,img});await save()});
+ all(".cta").forEach(a=>a.addEventListener("click",e=>{if(!(S.book&&S.book.startsWith("https://"))){e.preventDefault();if(own){fill();$("#dr").hidden=false}}}));
+}
+render();wire();
+(async()=>{try{
+ const u=await claude.use("user");own=!!(u&&await u.isOwner());
+ if(own){assets=await claude.use("assets");art=await claude.use("artifact")}
+ if(own&&assets&&art){$("#edit").hidden=false;render()}else own=false;
+}catch(e){}})();
+</script></body></html>
